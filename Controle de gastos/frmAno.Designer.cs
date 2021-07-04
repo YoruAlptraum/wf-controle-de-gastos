@@ -29,6 +29,7 @@ namespace Controle_de_gastos
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAno));
             this.nudAno = new System.Windows.Forms.NumericUpDown();
             this.btnConfirmar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).BeginInit();
@@ -65,6 +66,7 @@ namespace Controle_de_gastos
             this.Controls.Add(this.nudAno);
             this.Font = new System.Drawing.Font("Trebuchet MS", 27F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(10);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

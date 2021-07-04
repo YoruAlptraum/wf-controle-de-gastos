@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Threading;
 using System.Windows.Forms;
 using System.IO;
 using System.Globalization;
@@ -16,7 +15,6 @@ namespace Controle_de_gastos
 {
     public partial class frmPrincipal : Form
     {
-        Thread t1;
         private ListViewColumnSorter lvwColumnSorter;
         Controle ctrl = new Controle();
         DataTable dt;

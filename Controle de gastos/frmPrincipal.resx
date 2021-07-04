@@ -210,6 +210,27 @@
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="btnAddAno.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="btnAddAno.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnAddAno.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAddAno.Location" type="System.Drawing.Point, System.Drawing">
+    <value>426, 0</value>
+  </data>
+  <data name="btnAddAno.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 0, 0, 1</value>
+  </data>
+  <data name="btnAddAno.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 53</value>
+  </data>
+  <data name="btnAddAno.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;btnAddAno.Name" xml:space="preserve">
     <value>btnAddAno</value>
   </data>
@@ -221,6 +242,21 @@
   </data>
   <data name="&gt;&gt;btnAddAno.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="cmbAno.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="cmbAno.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="cmbAno.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="cmbAno.Size" type="System.Drawing.Size, System.Drawing">
+    <value>425, 52</value>
+  </data>
+  <data name="cmbAno.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;cmbAno.Name" xml:space="preserve">
     <value>cmbAno</value>
@@ -302,165 +338,6 @@
   </data>
   <data name="&gt;&gt;splTop.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="btnAddAno.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="btnAddAno.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="btnAddAno.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnAddAno.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 0</value>
-  </data>
-  <data name="btnAddAno.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 0, 0, 1</value>
-  </data>
-  <data name="btnAddAno.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 53</value>
-  </data>
-  <data name="btnAddAno.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnAddAno.Name" xml:space="preserve">
-    <value>btnAddAno</value>
-  </data>
-  <data name="&gt;&gt;btnAddAno.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddAno.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;btnAddAno.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="cmbAno.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="cmbAno.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="cmbAno.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="cmbAno.Size" type="System.Drawing.Size, System.Drawing">
-    <value>425, 52</value>
-  </data>
-  <data name="cmbAno.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cmbAno.Name" xml:space="preserve">
-    <value>cmbAno</value>
-  </data>
-  <data name="&gt;&gt;cmbAno.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbAno.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;cmbAno.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnComparar.Name" xml:space="preserve">
-    <value>btnComparar</value>
-  </data>
-  <data name="&gt;&gt;btnComparar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnComparar.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;btnComparar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblPrevisao.Name" xml:space="preserve">
-    <value>lblPrevisao</value>
-  </data>
-  <data name="&gt;&gt;lblPrevisao.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblPrevisao.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;lblPrevisao.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblTotal.Name" xml:space="preserve">
-    <value>lblTotal</value>
-  </data>
-  <data name="&gt;&gt;lblTotal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTotal.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;lblTotal.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnRemover.Name" xml:space="preserve">
-    <value>btnRemover</value>
-  </data>
-  <data name="&gt;&gt;btnRemover.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRemover.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;btnRemover.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnAlterar.Name" xml:space="preserve">
-    <value>btnAlterar</value>
-  </data>
-  <data name="&gt;&gt;btnAlterar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAlterar.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;btnAlterar.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnNovo.Name" xml:space="preserve">
-    <value>btnNovo</value>
-  </data>
-  <data name="&gt;&gt;btnNovo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnNovo.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;btnNovo.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 556</value>
-  </data>
-  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 8, 10, 8</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>984, 98</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="btnComparar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -657,6 +534,60 @@
   <data name="&gt;&gt;btnNovo.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 556</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 8, 10, 8</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>984, 98</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cmbFiltros.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="cmbFiltros.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 27pt</value>
+  </data>
+  <data name="cmbFiltros.Items" xml:space="preserve">
+    <value>Todos os registros</value>
+  </data>
+  <data name="cmbFiltros.Items1" xml:space="preserve">
+    <value>Receitas</value>
+  </data>
+  <data name="cmbFiltros.Items2" xml:space="preserve">
+    <value>Despesas</value>
+  </data>
+  <data name="cmbFiltros.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 54</value>
+  </data>
+  <data name="cmbFiltros.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 8, 10, 8</value>
+  </data>
+  <data name="cmbFiltros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>984, 52</value>
+  </data>
+  <data name="cmbFiltros.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
   <data name="&gt;&gt;cmbFiltros.Name" xml:space="preserve">
     <value>cmbFiltros</value>
   </data>
@@ -696,43 +627,43 @@
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="cmbFiltros.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="chDescriçao.Text" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="chDescriçao.Width" type="System.Int32, mscorlib">
+    <value>473</value>
+  </data>
+  <data name="chValor.Text" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="chValor.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="chStatus.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="chStatus.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="chData.Text" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="chData.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="lvwControle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="cmbFiltros.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Trebuchet MS, 27pt</value>
+  <data name="lvwControle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="cmbFiltros.Items" xml:space="preserve">
-    <value>Todos os registros</value>
+  <data name="lvwControle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
-  <data name="cmbFiltros.Items1" xml:space="preserve">
-    <value>Receitas</value>
+  <data name="lvwControle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>984, 450</value>
   </data>
-  <data name="cmbFiltros.Items2" xml:space="preserve">
-    <value>Despesas</value>
-  </data>
-  <data name="cmbFiltros.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 54</value>
-  </data>
-  <data name="cmbFiltros.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 8, 10, 8</value>
-  </data>
-  <data name="cmbFiltros.Size" type="System.Drawing.Size, System.Drawing">
-    <value>984, 52</value>
-  </data>
-  <data name="cmbFiltros.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;cmbFiltros.Name" xml:space="preserve">
-    <value>cmbFiltros</value>
-  </data>
-  <data name="&gt;&gt;cmbFiltros.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbFiltros.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;cmbFiltros.ZOrder" xml:space="preserve">
+  <data name="lvwControle.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;lvwControle.Name" xml:space="preserve">
@@ -774,57 +705,6 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="lvwControle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="lvwControle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="lvwControle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="lvwControle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>984, 450</value>
-  </data>
-  <data name="lvwControle.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lvwControle.Name" xml:space="preserve">
-    <value>lvwControle</value>
-  </data>
-  <data name="&gt;&gt;lvwControle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lvwControle.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;lvwControle.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="chDescriçao.Text" xml:space="preserve">
-    <value>Descrição</value>
-  </data>
-  <data name="chDescriçao.Width" type="System.Int32, mscorlib">
-    <value>473</value>
-  </data>
-  <data name="chValor.Text" xml:space="preserve">
-    <value>Valor</value>
-  </data>
-  <data name="chValor.Width" type="System.Int32, mscorlib">
-    <value>150</value>
-  </data>
-  <data name="chStatus.Text" xml:space="preserve">
-    <value>Status</value>
-  </data>
-  <data name="chStatus.Width" type="System.Int32, mscorlib">
-    <value>200</value>
-  </data>
-  <data name="chData.Text" xml:space="preserve">
-    <value>Data</value>
-  </data>
-  <data name="chData.Width" type="System.Int32, mscorlib">
-    <value>150</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -836,6 +716,82 @@
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Trebuchet MS, 27pt</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        I8P+AAfj//AH///wB///+A////4///////8=
+</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 8, 10, 8</value>
