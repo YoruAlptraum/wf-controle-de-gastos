@@ -142,34 +142,38 @@ namespace Controle_de_gastos
             // 
             // btnNovo
             // 
+            this.btnNovo.BackColor = System.Drawing.Color.Transparent;
             this.btnNovo.BackgroundImage = global::Controle_de_gastos.Properties.Resources.add;
             resources.ApplyResources(this.btnNovo, "btnNovo");
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnComparar
             // 
+            this.btnComparar.BackColor = System.Drawing.Color.Transparent;
             this.btnComparar.BackgroundImage = global::Controle_de_gastos.Properties.Resources.compare;
             resources.ApplyResources(this.btnComparar, "btnComparar");
             this.btnComparar.Name = "btnComparar";
-            this.btnComparar.UseVisualStyleBackColor = true;
+            this.btnComparar.UseVisualStyleBackColor = false;
             this.btnComparar.Click += new System.EventHandler(this.btnComparar_Click);
             // 
             // btnAlterar
             // 
+            this.btnAlterar.BackColor = System.Drawing.Color.Transparent;
             this.btnAlterar.BackgroundImage = global::Controle_de_gastos.Properties.Resources.Alterar;
             resources.ApplyResources(this.btnAlterar, "btnAlterar");
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnRemover
             // 
+            this.btnRemover.BackColor = System.Drawing.Color.Transparent;
             this.btnRemover.BackgroundImage = global::Controle_de_gastos.Properties.Resources.trash;
             resources.ApplyResources(this.btnRemover, "btnRemover");
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.UseVisualStyleBackColor = false;
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // lblPrevisao
