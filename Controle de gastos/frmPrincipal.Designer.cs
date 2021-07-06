@@ -36,12 +36,13 @@ namespace Controle_de_gastos
             this.btnAddAno = new System.Windows.Forms.Button();
             this.cmbAno = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.btnComparar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnRemover = new System.Windows.Forms.Button();
             this.lblPrevisao = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.btnRemover = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbFiltros = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -56,6 +57,7 @@ namespace Controle_de_gastos
             this.splTop.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +78,7 @@ namespace Controle_de_gastos
             // 
             // cmbMes
             // 
+            this.cmbMes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             resources.ApplyResources(this.cmbMes, "cmbMes");
             this.cmbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMes.FormattingEnabled = true;
@@ -113,6 +116,7 @@ namespace Controle_de_gastos
             // 
             // cmbAno
             // 
+            this.cmbAno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             resources.ApplyResources(this.cmbAno, "cmbAno");
             this.cmbAno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAno.FormattingEnabled = true;
@@ -121,22 +125,52 @@ namespace Controle_de_gastos
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnComparar);
+            this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Controls.Add(this.lblPrevisao);
             this.panel1.Controls.Add(this.lblTotal);
-            this.panel1.Controls.Add(this.btnRemover);
-            this.panel1.Controls.Add(this.btnAlterar);
-            this.panel1.Controls.Add(this.btnNovo);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
+            // tableLayoutPanel2
+            // 
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
+            this.tableLayoutPanel2.Controls.Add(this.btnNovo, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnComparar, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnAlterar, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnRemover, 1, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.BackgroundImage = global::Controle_de_gastos.Properties.Resources.add;
+            resources.ApplyResources(this.btnNovo, "btnNovo");
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
             // btnComparar
             // 
-            resources.ApplyResources(this.btnComparar, "btnComparar");
             this.btnComparar.BackgroundImage = global::Controle_de_gastos.Properties.Resources.compare;
+            resources.ApplyResources(this.btnComparar, "btnComparar");
             this.btnComparar.Name = "btnComparar";
             this.btnComparar.UseVisualStyleBackColor = true;
             this.btnComparar.Click += new System.EventHandler(this.btnComparar_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.BackgroundImage = global::Controle_de_gastos.Properties.Resources.Alterar;
+            resources.ApplyResources(this.btnAlterar, "btnAlterar");
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.BackgroundImage = global::Controle_de_gastos.Properties.Resources.trash;
+            resources.ApplyResources(this.btnRemover, "btnRemover");
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // lblPrevisao
             // 
@@ -148,30 +182,6 @@ namespace Controle_de_gastos
             resources.ApplyResources(this.lblTotal, "lblTotal");
             this.lblTotal.Name = "lblTotal";
             // 
-            // btnRemover
-            // 
-            resources.ApplyResources(this.btnRemover, "btnRemover");
-            this.btnRemover.BackgroundImage = global::Controle_de_gastos.Properties.Resources.trash;
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.UseVisualStyleBackColor = true;
-            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
-            // 
-            // btnAlterar
-            // 
-            resources.ApplyResources(this.btnAlterar, "btnAlterar");
-            this.btnAlterar.BackgroundImage = global::Controle_de_gastos.Properties.Resources.Alterar;
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-            // 
-            // btnNovo
-            // 
-            resources.ApplyResources(this.btnNovo, "btnNovo");
-            this.btnNovo.BackgroundImage = global::Controle_de_gastos.Properties.Resources.add;
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.cmbFiltros);
@@ -181,6 +191,7 @@ namespace Controle_de_gastos
             // 
             // cmbFiltros
             // 
+            this.cmbFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             resources.ApplyResources(this.cmbFiltros, "cmbFiltros");
             this.cmbFiltros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltros.FormattingEnabled = true;
@@ -199,7 +210,7 @@ namespace Controle_de_gastos
             // 
             // lvwControle
             // 
-            this.lvwControle.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lvwControle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lvwControle.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chDescriçao,
             this.chValor,
@@ -234,6 +245,7 @@ namespace Controle_de_gastos
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -248,6 +260,7 @@ namespace Controle_de_gastos
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -276,6 +289,7 @@ namespace Controle_de_gastos
         private System.Windows.Forms.Button btnComparar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnAddAno;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }
 

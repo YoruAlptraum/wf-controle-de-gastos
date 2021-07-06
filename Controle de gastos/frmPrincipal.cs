@@ -26,6 +26,9 @@ namespace Controle_de_gastos
         public frmPrincipal(params frmPrincipal[] frmOriginal)
         {
             InitializeComponent();
+            PreencherCmbMes();
+            PreencherCmbFiltros();
+
             if (frmOriginal.Length > 0)
             {
                 btnComparar.Enabled = btnComparar.Visible = false;
@@ -45,7 +48,7 @@ namespace Controle_de_gastos
             CultureInfo culture = new CultureInfo("pt-BR",false);
             cmbMes.SelectedIndex = DateTime.Today.Month;
             cmbAno.SelectedItem = "controle"+ DateTime.Today.Year.ToString();
-            cmbFiltros.SelectedItem = "Todos os registros";
+            cmbFiltros.SelectedIndex = 0;
 
             //Preencher a listview
             PreencherlvwControle(false);
@@ -57,6 +60,7 @@ namespace Controle_de_gastos
 
         public void AdicionarCmbAnos()
         {
+            string anoAtual = cmbAno.Text;
             dt = new DataTable();
             //adicionar os diferentes anos na combobox
             dt = ctrl.ControleAnos();
@@ -65,8 +69,33 @@ namespace Controle_de_gastos
             {
                 cmbAno.Items.Add(dr[0]);
             }
+            if (cmbAno.Items.Contains(anoAtual)) cmbAno.SelectedItem = anoAtual;
         }
-
+        private void PreencherCmbMes()
+        {
+            string[] meses = new string[]
+            {
+                "Todos os Meses","Janeiro","Fevereiro","Março","Abril","Maio",
+                "Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"
+            };
+            cmbMes.Items.Clear();
+            foreach (string m in meses)
+            {
+                cmbMes.Items.Add($"** {m} **");
+            }
+        }
+        private void PreencherCmbFiltros()
+        {
+            string[] filtros = new string[]
+            {
+                "Todos os Registros","Receitas","Despesas"
+            };
+            cmbFiltros.Items.Clear();
+            foreach (string f in filtros)
+            {
+                cmbFiltros.Items.Add($"** {f} **");
+            }
+        }
         //preenche a listview sem filtro
         private void PreencherlvwControle(bool anoInteiro)
         {
@@ -138,9 +167,105 @@ namespace Controle_de_gastos
 
         private void Principal_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Delete)
+            switch (e.KeyCode)
             {
-                RemoverItem();
+                case Keys.Delete:
+                    RemoverItem();//Remover Item
+                    break;
+                case Keys.Enter://Alterar Item
+                    AlterarItem();
+                    break;
+                case Keys.N://Novo Registro
+                    AbrirControle(true);
+                    break;
+                case Keys.C://Comparar Tabelas
+                    Comparar();
+                    break;
+                //Selecionar Meses
+                case Keys.D0:case Keys.NumPad0://Todos os meses
+                    cmbMes.SelectedIndex =0;
+                    cmbMes.Focus();
+                    break;
+                case Keys.D1:case Keys.NumPad1://Janeiro
+                    cmbMes.SelectedIndex = 1;
+                    cmbMes.Focus();
+                    break;
+                case Keys.D2:case Keys.NumPad2://Fevereiro
+                    cmbMes.SelectedIndex = 2;
+                    cmbMes.Focus();
+                    break;
+                case Keys.D3:case Keys.NumPad3://Março
+                    cmbMes.SelectedIndex = 3;
+                    cmbMes.Focus();
+                    break;
+                case Keys.D4:case Keys.NumPad4://Abril
+                    cmbMes.SelectedIndex = 4;
+                    cmbMes.Focus();
+                    break;
+                case Keys.D5:case Keys.NumPad5://Maio
+                    cmbMes.SelectedIndex = 5;
+                    cmbMes.Focus();
+                    break;
+                case Keys.D6:case Keys.NumPad6://Junho
+                    cmbMes.SelectedIndex = 6;
+                    cmbMes.Focus();
+                    break;
+                case Keys.D7:case Keys.NumPad7://Julho
+                    cmbMes.SelectedIndex = 7;
+                    cmbMes.Focus();
+                    break;
+                case Keys.D8:case Keys.NumPad8://Agosto
+                    cmbMes.SelectedIndex = 8;
+                    cmbMes.Focus();
+                    break;
+                case Keys.D9:case Keys.NumPad9://Setembro
+                    cmbMes.SelectedIndex = 9;
+                    cmbMes.Focus();
+                    break;
+                //Filtros
+                //Todos os registros
+                //Receitas
+                //Despesas
+                case Keys.T:
+                    cmbFiltros.SelectedIndex = 0;
+                    cmbFiltros.Focus();
+                    break;
+                case Keys.R:
+                    cmbFiltros.SelectedIndex = 1;
+                    cmbFiltros.Focus();
+                    break;
+                case Keys.D:
+                    cmbFiltros.SelectedIndex = 2;
+                    cmbFiltros.Focus();
+                    break;
+                case Keys.L:
+                    lvwControle.Focus();
+                    break;
+            }
+            //Tecla mais modificador de tecla - controle
+            if(ModifierKeys == Keys.Control)
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.D0:case Keys.NumPad0://Outubro
+                        cmbMes.SelectedIndex = 10;
+                        cmbMes.Focus();
+                        break;
+                    case Keys.D1:case Keys.NumPad1://Novembro
+                        cmbMes.SelectedIndex = 11;
+                        cmbMes.Focus();
+                        break;
+                    case Keys.D2:case Keys.NumPad2://Dezembro
+                        cmbMes.SelectedIndex = 12;
+                        cmbMes.Focus();
+                        break;
+                    case Keys.A:
+                        AddAno();
+                        break;
+                    case Keys.W:
+                        this.Close();
+                        break;
+                }
             }
         }
         private void RemoverItem()
@@ -154,15 +279,48 @@ namespace Controle_de_gastos
                 AtualizarLvwControle();
             }
         }
+        private void AlterarItem()
+        {
+            if (lvwControle.SelectedItems.Count > 0)
+            {
+                AbrirControle(false, lvwControle.SelectedItems[0].SubItems[0].Text,
+                    lvwControle.SelectedItems[0].SubItems[1].Text,
+                    lvwControle.SelectedItems[0].SubItems[2].Text,
+                    lvwControle.SelectedItems[0].SubItems[3].Text,
+                    lvwControle.SelectedItems[0].SubItems[4].Text);
+            }
+        }
+        private void Comparar()
+        {
+            if (frmClone == null)
+            {
+                frmClone = new frmPrincipal(this);
+                frmClone.Show();
+            }
+            else
+            {
+                frmClone.BringToFront();
+            }
+            btnAlterar.Enabled = btnRemover.Enabled = false;
+        }
+        private void AddAno()
+        {
+            if (frmNovoAno == null)
+            {
+                frmNovoAno = new frmAno(this);
+                frmNovoAno.Show();
+            }
+            else frmNovoAno.BringToFront();
+        }
         public void AtualizarLvwControle()
         {
-            if (cmbMes.Text.Equals("Todos os meses"))
+            if (cmbMes.Text.Contains("Todos os Meses"))
             {
-                if (cmbFiltros.Text.Equals("Todos os registros"))
+                if (cmbFiltros.Text.Contains("Todos os registros"))
                 {
                     PreencherlvwControle(true);
                 }
-                else if (cmbFiltros.Text.Equals("Despesas"))
+                else if (cmbFiltros.Text.Contains("Despesas"))
                 {
                     PreencherlvwControle(true, false);
                 }
@@ -170,11 +328,11 @@ namespace Controle_de_gastos
             }
             else
             {
-                if (cmbFiltros.Text.Equals("Todos os registros"))
+                if (cmbFiltros.Text.Contains("Todos os registros"))
                 {
                     PreencherlvwControle(false);
                 }
-                else if (cmbFiltros.Text.Equals("Despesas"))
+                else if (cmbFiltros.Text.Contains("Despesas"))
                 {
                     PreencherlvwControle(false, false);
                 }
@@ -222,11 +380,7 @@ namespace Controle_de_gastos
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            AbrirControle(false,lvwControle.SelectedItems[0].SubItems[0].Text,
-                lvwControle.SelectedItems[0].SubItems[1].Text,
-                lvwControle.SelectedItems[0].SubItems[2].Text,
-                lvwControle.SelectedItems[0].SubItems[3].Text,
-                lvwControle.SelectedItems[0].SubItems[4].Text);
+            AlterarItem();
         }
         private void btnNovo_Click(object sender, EventArgs e)
         {
@@ -235,32 +389,19 @@ namespace Controle_de_gastos
 
         private void btnComparar_Click(object sender, EventArgs e)
         {
-            if (frmClone == null)
-            {
-                frmClone = new frmPrincipal(this);
-                frmClone.Show();
-            }
-            else
-            {
-                frmClone.BringToFront();
-            }
-            btnAlterar.Enabled = btnRemover.Enabled = false;
+            Comparar();
         }
 
         private void btnAddAno_Click(object sender, EventArgs e)
         {
-            if (frmNovoAno == null)
-            {
-                frmNovoAno = new frmAno(this);
-                frmNovoAno.Show();
-            }
-            else frmNovoAno.BringToFront();
+            AddAno();
         }
 
         private void cmb_SelectedIndexChanged(object sender, EventArgs e)
         {
             AtualizarLvwControle();
         }
+
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             if(frmOriginal != null)

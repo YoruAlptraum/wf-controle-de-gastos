@@ -92,21 +92,65 @@ namespace Controle_de_gastos
             {
                 principal.frmClone.AtualizarLvwControle();
             }
+            //limpar controle
+            txbDescriçao.Text = "";
         }
         private void Controle_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter && btnConfirmar.Enabled)
+            switch (e.KeyCode)
             {
-                Confirmar();
+                case Keys.Enter:
+                    if (btnConfirmar.Enabled) Confirmar();
+                    break;
+            }
+            if (ModifierKeys == Keys.Control)
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.W:
+                        this.Close();
+                        break;
+                }
             }
         }
 
         private void txbDescriçao_TextChanged(object sender, EventArgs e)
         {
-            if(txbDescriçao.TextLength > 0)
-            {
-                btnConfirmar.Enabled = true;
-            }
+            if(txbDescriçao.TextLength > 0) btnConfirmar.Enabled = true;
+            else btnConfirmar.Enabled = false;
+        }
+
+        private void nudValor_Click(object sender, EventArgs e)
+        {
+            SelectNudValorValue();
+        }
+
+        private void nudValor_Enter(object sender, EventArgs e)
+        {
+            SelectNudValorValue();
+        }
+        private void SelectNudValorValue()
+        {
+            if (nudValor.Value >= 0)
+                nudValor.Select(0, nudValor.ToString().Length);
+            else nudValor.Select(1, nudValor.ToString().Length);
+        }
+
+        private void frmControle_Shown(object sender, EventArgs e)
+        {
+            CenterMouseOverControl(txbDescriçao);
+        }
+        private void CenterMouseOverControl(Control ctl)
+        {
+            // See where to put the mouse.
+            Point target = new Point(
+                (ctl.Left + ctl.Right) / 2,
+                (ctl.Top + ctl.Bottom) / 2);
+
+            // Convert to screen coordinates.
+            Point screen_coords = ctl.Parent.PointToScreen(target);
+
+            Cursor.Position = screen_coords;
         }
     }
 }

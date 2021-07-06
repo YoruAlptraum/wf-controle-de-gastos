@@ -261,7 +261,7 @@
     <value>237, 52</value>
   </data>
   <data name="cmbStatus.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;cmbStatus.Name" xml:space="preserve">
     <value>cmbStatus</value>
@@ -282,7 +282,11 @@
     <value>666, 49</value>
   </data>
   <data name="nudValor.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>2</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="nudValor.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
   </data>
   <data name="nudValor.ThousandsSeparator" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -299,7 +303,6 @@
   <data name="&gt;&gt;nudValor.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnConfirmar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
   </data>
@@ -310,7 +313,7 @@
     <value>941, 56</value>
   </data>
   <data name="btnConfirmar.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>5</value>
   </data>
   <data name="btnConfirmar.Text" xml:space="preserve">
     <value>Confirmar</value>
@@ -337,7 +340,7 @@
     <value>237, 49</value>
   </data>
   <data name="dtpData.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;dtpData.Name" xml:space="preserve">
     <value>dtpData</value>

@@ -37,6 +37,7 @@ namespace Controle_de_gastos
             // 
             // nudAno
             // 
+            this.nudAno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nudAno.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudAno.Location = new System.Drawing.Point(0, 0);
             this.nudAno.Name = "nudAno";
@@ -73,6 +74,9 @@ namespace Controle_de_gastos
             this.Name = "frmAno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Selecione o ano";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAno_FormClosed);
+            this.Shown += new System.EventHandler(this.frmAno_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAno_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).EndInit();
             this.ResumeLayout(false);
 

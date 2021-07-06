@@ -90,7 +90,7 @@ namespace Controle_de_gastos.Classes
                 {
                     cmd.CommandText = $@"select *
                     from {ano}
-                    where valor <= 0;";
+                    where valor < 0;";
                 }
             }
             else
@@ -106,7 +106,7 @@ namespace Controle_de_gastos.Classes
                 {
                     cmd.CommandText = $@"select *
                     from {ano}
-                    where valor <= 0 and month(dataRegistro) = @mes;";
+                    where valor < 0 and month(dataRegistro) = @mes;";
                     cmd.Parameters.AddWithValue("@mes", mes);
                 }
             }
@@ -211,8 +211,9 @@ namespace Controle_de_gastos.Classes
                 con.Desconectar();
             }
         }
-        public void NovoAno(int ano)
+        public string NovoAno(int ano)
         {
+            string m = "";
             cmd = new MySqlCommand();
             cmd.CommandText = $@"create table controle{ano}(
                 id bigint primary key auto_increment,
@@ -224,16 +225,19 @@ namespace Controle_de_gastos.Classes
             {
                 cmd.Connection = con.Conectar();
                 cmd.ExecuteNonQuery();
-                Debug.WriteLine("tabela criada");
+                m = "Tabela criada";
+                Debug.WriteLine(m);
             }
             catch (MySqlException e)
             {
-                Debug.WriteLine("Tabela não pôde ser criada:"+e);
+                m = "Não foi possivel criar a tabela : "+ e.Message;
+                Debug.WriteLine(m);
             }
             finally
             {
                 con.Desconectar();
             }
+            return m;
         }
     }
 }

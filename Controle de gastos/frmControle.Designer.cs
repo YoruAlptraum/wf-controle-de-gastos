@@ -49,6 +49,7 @@ namespace Controle_de_gastos
             // 
             // txbDescriçao
             // 
+            this.txbDescriçao.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.txbDescriçao, "txbDescriçao");
             this.txbDescriçao.Name = "txbDescriçao";
             this.txbDescriçao.TextChanged += new System.EventHandler(this.txbDescriçao_TextChanged);
@@ -70,6 +71,7 @@ namespace Controle_de_gastos
             // 
             // cmbStatus
             // 
+            this.cmbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Items.AddRange(new object[] {
@@ -80,6 +82,7 @@ namespace Controle_de_gastos
             // 
             // nudValor
             // 
+            this.nudValor.BackColor = System.Drawing.Color.White;
             this.nudValor.DecimalPlaces = 2;
             resources.ApplyResources(this.nudValor, "nudValor");
             this.nudValor.Maximum = new decimal(new int[] {
@@ -93,6 +96,8 @@ namespace Controle_de_gastos
             0,
             -2147483648});
             this.nudValor.Name = "nudValor";
+            this.nudValor.Click += new System.EventHandler(this.nudValor_Click);
+            this.nudValor.Enter += new System.EventHandler(this.nudValor_Enter);
             // 
             // btnConfirmar
             // 
@@ -103,6 +108,8 @@ namespace Controle_de_gastos
             // 
             // dtpData
             // 
+            this.dtpData.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtpData.CalendarTitleBackColor = System.Drawing.Color.Purple;
             resources.ApplyResources(this.dtpData, "dtpData");
             this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpData.Name = "dtpData";
@@ -125,6 +132,7 @@ namespace Controle_de_gastos
             this.MinimizeBox = false;
             this.Name = "frmControle";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Controle_FormClosed);
+            this.Shown += new System.EventHandler(this.frmControle_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Controle_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();
             this.ResumeLayout(false);
