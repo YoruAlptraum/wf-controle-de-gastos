@@ -21,13 +21,19 @@ namespace Controle_de_gastos
         public frmPrincipal principal;
         public bool criar;
         int idControle;
-        public frmControle(frmPrincipal principal,bool criar,int oAno,params string[] p)
+        public frmControle(frmPrincipal principal, bool criar, int oAno, int oMes, params string[] p)
         {
             InitializeComponent();
             cmbStatus.SelectedIndex = 0;
             btnConfirmar.Enabled = false;
             this.principal = principal;
-            this.criar = criar;            
+            this.criar = criar;
+            DateTime d;
+            if (oMes != 0)
+            {
+                d = new DateTime(oAno, oMes, DateTime.Now.Day);
+                dtpData.Value = d;
+            }
             if (p.Length == 5) AtualizarCampos(p);
 
             dtpData.Format = DateTimePickerFormat.Custom;

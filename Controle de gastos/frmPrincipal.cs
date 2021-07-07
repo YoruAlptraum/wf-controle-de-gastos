@@ -149,7 +149,7 @@ namespace Controle_de_gastos
             string oAno = cmbAno.Text.Substring(8,4);
             if (frmCtrl == null)
             {
-                frmCtrl = new frmControle(this, criar,Int32.Parse(oAno), p);
+                frmCtrl = new frmControle(this, criar,Int32.Parse(oAno),cmbMes.SelectedIndex, p);
                 frmCtrl.Show();
                 frmCtrl.TopLevel = true;
             }
@@ -167,95 +167,23 @@ namespace Controle_de_gastos
 
         private void Principal_KeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
-            {
-                case Keys.Delete:
-                    RemoverItem();//Remover Item
-                    break;
-                case Keys.Enter://Alterar Item
-                    AlterarItem();
-                    break;
-                case Keys.N://Novo Registro
-                    AbrirControle(true);
-                    break;
-                case Keys.C://Comparar Tabelas
-                    Comparar();
-                    break;
-                //Selecionar Meses
-                case Keys.D0:case Keys.NumPad0://Todos os meses
-                    cmbMes.SelectedIndex =0;
-                    cmbMes.Focus();
-                    break;
-                case Keys.D1:case Keys.NumPad1://Janeiro
-                    cmbMes.SelectedIndex = 1;
-                    cmbMes.Focus();
-                    break;
-                case Keys.D2:case Keys.NumPad2://Fevereiro
-                    cmbMes.SelectedIndex = 2;
-                    cmbMes.Focus();
-                    break;
-                case Keys.D3:case Keys.NumPad3://Março
-                    cmbMes.SelectedIndex = 3;
-                    cmbMes.Focus();
-                    break;
-                case Keys.D4:case Keys.NumPad4://Abril
-                    cmbMes.SelectedIndex = 4;
-                    cmbMes.Focus();
-                    break;
-                case Keys.D5:case Keys.NumPad5://Maio
-                    cmbMes.SelectedIndex = 5;
-                    cmbMes.Focus();
-                    break;
-                case Keys.D6:case Keys.NumPad6://Junho
-                    cmbMes.SelectedIndex = 6;
-                    cmbMes.Focus();
-                    break;
-                case Keys.D7:case Keys.NumPad7://Julho
-                    cmbMes.SelectedIndex = 7;
-                    cmbMes.Focus();
-                    break;
-                case Keys.D8:case Keys.NumPad8://Agosto
-                    cmbMes.SelectedIndex = 8;
-                    cmbMes.Focus();
-                    break;
-                case Keys.D9:case Keys.NumPad9://Setembro
-                    cmbMes.SelectedIndex = 9;
-                    cmbMes.Focus();
-                    break;
-                //Filtros
-                //Todos os registros
-                //Receitas
-                //Despesas
-                case Keys.T:
-                    cmbFiltros.SelectedIndex = 0;
-                    cmbFiltros.Focus();
-                    break;
-                case Keys.R:
-                    cmbFiltros.SelectedIndex = 1;
-                    cmbFiltros.Focus();
-                    break;
-                case Keys.D:
-                    cmbFiltros.SelectedIndex = 2;
-                    cmbFiltros.Focus();
-                    break;
-                case Keys.L:
-                    lvwControle.Focus();
-                    break;
-            }
             //Tecla mais modificador de tecla - controle
-            if(ModifierKeys == Keys.Control)
+            if (ModifierKeys == Keys.Control)
             {
                 switch (e.KeyCode)
                 {
-                    case Keys.D0:case Keys.NumPad0://Outubro
+                    case Keys.D0:
+                    case Keys.NumPad0://Outubro
                         cmbMes.SelectedIndex = 10;
                         cmbMes.Focus();
                         break;
-                    case Keys.D1:case Keys.NumPad1://Novembro
+                    case Keys.D1:
+                    case Keys.NumPad1://Novembro
                         cmbMes.SelectedIndex = 11;
                         cmbMes.Focus();
                         break;
-                    case Keys.D2:case Keys.NumPad2://Dezembro
+                    case Keys.D2:
+                    case Keys.NumPad2://Dezembro
                         cmbMes.SelectedIndex = 12;
                         cmbMes.Focus();
                         break;
@@ -267,6 +195,99 @@ namespace Controle_de_gastos
                         break;
                 }
             }
+            else
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.Delete:
+                        RemoverItem();//Remover Item
+                        break;
+                    case Keys.Enter://Alterar Item
+                        AlterarItem();
+                        break;
+                    case Keys.N://Novo Registro
+                        AbrirControle(true);
+                        break;
+                    case Keys.C://Comparar Tabelas
+                        Comparar();
+                        break;
+                    //Selecionar Meses
+                    case Keys.D0:
+                    case Keys.NumPad0://Todos os meses
+                        cmbMes.SelectedIndex = 0;
+                        cmbMes.Focus();
+                        break;
+                    case Keys.D1:
+                    case Keys.NumPad1://Janeiro
+                        cmbMes.SelectedIndex = 1;
+                        cmbMes.Focus();
+                        break;
+                    case Keys.D2:
+                    case Keys.NumPad2://Fevereiro
+                        cmbMes.SelectedIndex = 2;
+                        cmbMes.Focus();
+                        break;
+                    case Keys.D3:
+                    case Keys.NumPad3://Março
+                        cmbMes.SelectedIndex = 3;
+                        cmbMes.Focus();
+                        break;
+                    case Keys.D4:
+                    case Keys.NumPad4://Abril
+                        cmbMes.SelectedIndex = 4;
+                        cmbMes.Focus();
+                        break;
+                    case Keys.D5:
+                    case Keys.NumPad5://Maio
+                        cmbMes.SelectedIndex = 5;
+                        cmbMes.Focus();
+                        break;
+                    case Keys.D6:
+                    case Keys.NumPad6://Junho
+                        cmbMes.SelectedIndex = 6;
+                        cmbMes.Focus();
+                        break;
+                    case Keys.D7:
+                    case Keys.NumPad7://Julho
+                        cmbMes.SelectedIndex = 7;
+                        cmbMes.Focus();
+                        break;
+                    case Keys.D8:
+                    case Keys.NumPad8://Agosto
+                        cmbMes.SelectedIndex = 8;
+                        cmbMes.Focus();
+                        break;
+                    case Keys.D9:
+                    case Keys.NumPad9://Setembro
+                        cmbMes.SelectedIndex = 9;
+                        cmbMes.Focus();
+                        break;
+                    //Filtros
+                    //Todos os registros
+                    //Receitas
+                    //Despesas
+                    case Keys.T:
+                        cmbFiltros.SelectedIndex = 0;
+                        cmbFiltros.Focus();
+                        break;
+                    case Keys.R:
+                        cmbFiltros.SelectedIndex = 1;
+                        cmbFiltros.Focus();
+                        break;
+                    case Keys.D:
+                        cmbFiltros.SelectedIndex = 2;
+                        cmbFiltros.Focus();
+                        break;
+                    case Keys.L:
+                        lvwControle.Focus();
+                        break;
+                    case Keys.A:
+                        cmbAno.SelectedItem = "controle" + DateTime.Now.Year;
+                        cmbMes.SelectedIndex = DateTime.Now.Month;
+                        break;
+                }
+            }
+
         }
         private void RemoverItem()
         {
@@ -316,7 +337,7 @@ namespace Controle_de_gastos
         {
             if (cmbMes.Text.Contains("Todos os Meses"))
             {
-                if (cmbFiltros.Text.Contains("Todos os registros"))
+                if (cmbFiltros.Text.Contains("Todos os Registros"))
                 {
                     PreencherlvwControle(true);
                 }
@@ -328,7 +349,7 @@ namespace Controle_de_gastos
             }
             else
             {
-                if (cmbFiltros.Text.Contains("Todos os registros"))
+                if (cmbFiltros.Text.Contains("Todos os Registros"))
                 {
                     PreencherlvwControle(false);
                 }
